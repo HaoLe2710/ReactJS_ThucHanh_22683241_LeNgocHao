@@ -1,0 +1,59 @@
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.search_bar{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(243, 229, 229);
+    border-radius: 10px;
+}
+
+.search_bar input{
+    border: 0;
+    background-color: rgb(243, 229, 229);
+}
+
+.menu_bar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu_bar a{
+    text-decoration: none;
+    color: gray;
+    padding: 10px;
+}
+
+.menu_bar :hover{
+    color: white;
+}
+
+.recipesbox_account{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.recipesbox_account .recipesbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: pink;
+    color: palevioletred;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.recipesbox_account .recipesbox img{
+    width: 40%;
+    height: 40%;
+}
+
+.recipesbox_account .avatar img{
+    width: 40%;
+    justify-self: center;
+}
