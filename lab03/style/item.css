@@ -1,0 +1,56 @@
+.item-card{
+    width: 200px;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-body{
+    display: grid;
+    grid-template-columns: 130px 70px;
+}
+
+.card-text{
+    font-weight: bold;
+}
+
+.card-name{
+    display: grid;
+    grid-template-rows: auto 40px;
+}
+
+.card-tag{
+    padding: 10px;
+    background-color: darksalmon;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    opacity: 30%;
+}
+
+.card-save-button{
+    display: flex;
+    justify-content: center;
+}
+
+.save_img{
+    width: 50%;
+    
+}
+
+.card-save-button img{
+    width: 100%;
+    padding: 5px;
+    background-color: pink;
+    border-radius: 10px;
+    border: solid 2px palevioletred;
+}
+
+
