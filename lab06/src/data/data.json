@@ -1,0 +1,14 @@
+{
+    "turn_over":[{
+        "value" : 92405,
+        "percented": 0.539
+    }],
+    "profit":[{
+        "value" : 32218,
+        "percented": 0.539
+    }],
+    "new_customer":[{
+        "value" : 298,
+        "percented": 0.684
+    }]
+}
