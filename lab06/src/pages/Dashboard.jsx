@@ -1,3 +1,4 @@
+import DashboardDetail from "../components/DashboardDetail";
 import NavBar from "../components/NavBar";
 
 export default function Dashboard(){
@@ -7,9 +8,7 @@ export default function Dashboard(){
                 <NavBar/>
             </div>
             <div className="col-span-3 bg-blue-300">
-                <div>
-                    
-                </div>
+                <DashboardDetail/>
             </div>
         </div>
     )

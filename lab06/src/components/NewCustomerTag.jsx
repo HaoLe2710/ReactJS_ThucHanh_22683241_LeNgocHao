@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function ProfitTag(){
+export default function NewCustomerTag(){
 
     const [data, setData] = useState(null)
     
@@ -19,14 +19,14 @@ export default function ProfitTag(){
         return <div>Loading...</div>  // Thêm thông báo loading khi data chưa có
     }
 
-    const profit = data[0]
+    const new_customer = data[0]
 
     return(
         <div className="bg-green-200 rounded-xl p-5 grid grid-cols-4">
             <div className="flex flex-col col-span-3">
-                <p>Profit</p>
-                <p>${profit.value}</p>
-                <p>{(profit.percented * 100).toFixed(2)}% period at change</p>
+                <p>New customer</p>
+                <p>{new_customer.value}</p>
+                <p>{(new_customer.percented * 100).toFixed(2)}% period at change</p>
             </div>
         </div>
     )
