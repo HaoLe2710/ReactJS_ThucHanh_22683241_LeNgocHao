@@ -14,7 +14,7 @@
     }
   ],
   "new_customer": [
-    {
+    {   
       "value": 298,
       "percented": 0.0684,
       "id": "816e"
@@ -35,7 +35,7 @@
       "company": "GameZone Co.",
       "order_value": 2150000,
       "order_date": "2025-03-12",
-      "status": "Pending"
+      "status": "In-progress"
     },
     {
       "id": "3",
@@ -43,7 +43,7 @@
       "company": "DigitalPlay",
       "order_value": 875000,
       "order_date": "2025-03-14",
-      "status": "Cancelled"
+      "status": "New"
     },
     {
       "id": "4",
@@ -59,7 +59,7 @@
       "company": "PlayStation Hub",
       "order_value": 1490000,
       "order_date": "2025-03-20",
-      "status": "Processing"
+      "status": "In-progress"
     }
   ]
 }
