@@ -1,14 +1,63 @@
 {
-    "turn_over":[{
-        "value" : 92405,
-        "percented": 0.539
-    }],
-    "profit":[{
-        "value" : 32218,
-        "percented": 0.539
-    }],
-    "new_customer":[{
-        "value" : 298,
-        "percented": 0.684
-    }]
-}
+    "turn_over": [
+      {
+        "value": 92405,
+        "percented": 0.0539
+      }
+    ],
+    "profit": [
+      {
+        "value": 32218,
+        "percented": 0.0539
+      }
+    ],
+    "new_customer": [
+      {
+        "value": 298,
+        "percented": 0.0684
+      }
+    ],
+    "user_data": [
+      {
+        "id": 1,
+        "customer_name": "Nguyễn Văn A",
+        "company": "TechGear Inc.",
+        "order_value": 1250000,
+        "order_date": "2025-03-10",
+        "status": "Completed"
+      },
+      {
+        "id": 2,
+        "customer_name": "Trần Thị B",
+        "company": "GameZone Co.",
+        "order_value": 2150000,
+        "order_date": "2025-03-12",
+        "status": "Pending"
+      },
+      {
+        "id": 3,
+        "customer_name": "Lê Minh C",
+        "company": "DigitalPlay",
+        "order_value": 875000,
+        "order_date": "2025-03-14",
+        "status": "Cancelled"
+      },
+      {
+        "id": 4,
+        "customer_name": "Phạm Ngọc D",
+        "company": "SoftWorld",
+        "order_value": 3200000,
+        "order_date": "2025-03-18",
+        "status": "Completed"
+      },
+      {
+        "id": 5,
+        "customer_name": "Vũ Quốc E",
+        "company": "PlayStation Hub",
+        "order_value": 1490000,
+        "order_date": "2025-03-20",
+        "status": "Processing"
+      }
+    ]
+  }
+  
