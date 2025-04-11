@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DataTableBase from 'react-data-table-component';
 import UserModal from './UseModal';
+import { createUser, deleteUser, getUsers, updateUser } from '../services/useService';
 
 export default function DataTable() {
   const columns = [
@@ -32,14 +33,19 @@ export default function DataTable() {
     {
         name: 'Actions',
         cell: row => (
-          <button onClick={() => handleEdit(row)} className="text-blue-600 underline">
-            Sửa
-          </button>
+          <div className="flex gap-2">
+            <button onClick={() => handleEdit(row)} className="text-blue-600 underline">
+              Sửa
+            </button>
+            <button onClick={() => handleDelete(row.id)} className="text-red-600 underline">
+              Xoá
+            </button>
+          </div>
         ),
         ignoreRowClick: true,
         allowOverflow: true,
         button: true,
-      },
+      }
   ];
 
   const [users, setUsers] = useState([])
@@ -48,14 +54,17 @@ export default function DataTable() {
   const [isEditing, setIsEditing] = useState(false)
   const [editId, setEditId] = useState(null)
   
-  const fecth_user = () =>{
-    fetch('http://localhost:3000/user_data')
-        .then((r) => r.json())
-        .then((d) => setUsers(d))
+  const fecthUserData = async () =>{
+    try{
+        const data = await getUsers();
+        setUsers(data)
+    }catch(e){
+        alert(e)
+    }
   }
   
   useEffect(() =>{
-    fecth_user()
+    fecthUserData()
   },[])
 
   const handleEdit = (row) => {
@@ -73,21 +82,30 @@ export default function DataTable() {
 
 
   const handleSave = async () => {
-    if (isEditing) {
-      await fetch(`http://localhost:3000/user_data/${editId}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-    } else {
-      await fetch('http://localhost:3000/user_data', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+    try{
+        if(isEditing){
+            await updateUser(editId, formData)
+        }else{
+            await createUser(formData)
+        }
+        setModalOpen(false)
+        fecthUserData()
+    }catch(e){
+        alert(e)
     }
-    setModalOpen(false);
-    fecth_user();
+  }
+
+  const handleDelete = async(id) => {
+    const confirm  =  window.confirm("Bạn có chắc chắn muốn xoá ?")
+    if(!confirm){
+        return
+    }
+    try{
+        await deleteUser(id)
+        fecthUserData()
+    }catch(e){
+        alert("Xoá thất bại" + e)
+    }
   }
 
   return (
