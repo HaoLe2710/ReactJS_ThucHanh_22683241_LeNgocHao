@@ -3,6 +3,8 @@ import DataTableBase from 'react-data-table-component';
 import UserModal from './UseModal';
 import { createUser, deleteUser, getUsers, updateUser } from '../services/useService';
 import StatusBagde from './StatusBagde';
+import report from '../assets/profit-report.png'
+
 
 export default function DataTable() {
   const columns = [
@@ -35,10 +37,10 @@ export default function DataTable() {
         name: 'Actions',
         cell: row => (
           <div className="flex gap-2">
-            <button onClick={() => handleEdit(row)} className="text-blue-600 underline">
+            <button onClick={() => handleEdit(row)} className="p-1 m-1 ring-1 ring-blue-500 rounded-xl text-blue-500 cursor-pointer hover:bg-blue-500 hover:text-white">
               Sửa
             </button>
-            <button onClick={() => handleDelete(row.id)} className="text-red-600 underline">
+            <button onClick={() => handleDelete(row.id)} className="p-1 m-1 ring-1 ring-red-500 rounded-xl text-red-500 cursor-pointer hover:bg-red-500 hover:text-white">
               Xoá
             </button>
           </div>
@@ -48,6 +50,42 @@ export default function DataTable() {
         button: true,
       }
   ];
+
+  const customStyles = {
+    table: {
+      style: {
+        border: '1px solid #ccc',
+        borderRadius: '10px',
+      },
+    },
+    headRow: {
+      style: {
+        backgroundColor: '#e0f2fe', // màu xanh nhạt
+        color: '#1e3a8a', // màu chữ xanh đậm
+        fontWeight: 'bold',
+        borderBottom: '2px solid #60a5fa',
+      },
+    },
+    headCells: {
+      style: {
+        borderRight: '1px solid #ccc',
+        paddingLeft: '12px',
+        paddingRight: '12px',
+      },
+    },
+    rows: {
+      style: {
+        borderBottom: '1px solid #e5e7eb',
+      },
+    },
+    cells: {
+      style: {
+        paddingLeft: '12px',
+        paddingRight: '12px',
+      },
+    },
+  };
+  
 
   const [users, setUsers] = useState([])
   const [modalOpen, setModalOpen] = useState(false)
@@ -112,8 +150,11 @@ export default function DataTable() {
   return (
     <div className="p-4">
         <div className="flex justify-between mb-2">
-            <div><p>Detailed report</p></div>
-        <button onClick={handleAdd} className="bg-green-500 text-white px-4 py-1 rounded">
+            <div className='flex gap-2'>
+                <img className='size-[30px]' src={report} alt="" />
+                <p className='font-bold text-2xl'>Detailed report</p>
+            </div>
+        <button onClick={handleAdd} className="px-2 py-1 m-1 ring-1 ring-green-500 rounded-xl text-green-500 cursor-pointer hover:bg-green-500 hover:text-white">
           + Thêm User
         </button>
       </div>
@@ -123,6 +164,7 @@ export default function DataTable() {
         pagination
         highlightOnHover
         selectableRows
+        customStyles={customStyles}
       />
       <UserModal isOpen={modalOpen} onClose={() => setModalOpen(false)} onSave={handleSave} formData={formData} setFormData={setFormData} isEditing={isEditing}/>
     </div>

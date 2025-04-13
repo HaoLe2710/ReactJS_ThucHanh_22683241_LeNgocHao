@@ -1,13 +1,19 @@
 import { NavLink } from 'react-router-dom';
+import dashboard from '../assets/dashboard.png'
+import teams from '../assets/group.png'
+import integrations from '../assets/integrations.png'
+import messages from '../assets/messages.png'
+import projects from '../assets/project.png'
+import analytics from '../assets/analytics.png'
 
 export default function NavBar() {
   const navItems = [
-    { path: '/dashboard', label: 'Dashboard' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/teams', label: 'Teams' },
-    { path: '/analytics', label: 'Analytics' },
-    { path: '/messages', label: 'Messages' },
-    { path: '/integrations', label: 'Integrations' }
+    { path: '/dashboard', label: 'Dashboard', icon: dashboard },
+    { path: '/projects', label: 'Projects', icon: projects },
+    { path: '/teams', label: 'Teams', icon: teams },
+    { path: '/analytics', label: 'Analytics', icon: analytics },
+    { path: '/messages', label: 'Messages', icon: messages },
+    { path: '/integrations', label: 'Integrations', icon: integrations }
   ];
 
   return (
@@ -22,7 +28,10 @@ export default function NavBar() {
             }`
           }
         >
-          {item.label}
+            <div className='flex gap-5 align-middle '>
+                <img className='size-[30px]' src={item.icon} alt={item.label} />
+                <span>{item.label}</span>
+            </div>
         </NavLink>
       ))}
     </div>

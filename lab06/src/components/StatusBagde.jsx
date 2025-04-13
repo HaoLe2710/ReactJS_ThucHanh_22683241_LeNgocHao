@@ -6,8 +6,11 @@ export default function StatusBagde({status}){
     }
 
     return (
-        <span className={`p-[3px] rounded-xl text-[10px] justify-self-center font-medium border ${style[status] || ''}`}>
+        <span
+            className={`px-2 py-[2px] rounded-xl text-[10px] font-medium border inline-block whitespace-nowrap ${style[status] || ''}`}
+        >
             {status}
         </span>
+
     )
 }

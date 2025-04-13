@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import dollar from '../assets/dollar.png'
 
 export default function ProfitTag(){
 
@@ -27,6 +28,11 @@ export default function ProfitTag(){
                 <p>Profit</p>
                 <p>${profit.value}</p>
                 <p>{(profit.percented * 100).toFixed(2)}% period at change</p>
+            </div>
+            <div>
+                <button>
+                    <img src={dollar} className="size-[20px]" alt="" />
+                </button>
             </div>
         </div>
     )

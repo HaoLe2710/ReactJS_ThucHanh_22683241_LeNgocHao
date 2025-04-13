@@ -28,6 +28,9 @@ export default function NewCustomerTag(){
                 <p>{new_customer.value}</p>
                 <p>{(new_customer.percented * 100).toFixed(2)}% period at change</p>
             </div>
+            <div>
+                <img src="" alt="" />
+            </div>
         </div>
     )
 }

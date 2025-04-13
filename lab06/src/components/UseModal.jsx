@@ -40,12 +40,17 @@ export default function UserModal({ isOpen, onClose, onSave, formData, setFormDa
           className="border w-full p-1 rounded"
         />
 
-        <input
+        <select
           value={formData.status}
           onChange={e => setFormData({ ...formData, status: e.target.value })}
           className="border w-full p-1 rounded"
-          placeholder="Status"
-        />
+        >
+          <option value="">-- Chọn trạng thái --</option>
+          <option value="New">New</option>
+          <option value="In-processor">In-processor</option>
+          <option value="Completed">Completed</option>
+        </select>
+
 
         <div className="flex justify-end gap-2 pt-2">
           <button onClick={onClose} className="px-3 py-1 border rounded">Hủy</button>
