@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DataTableBase from 'react-data-table-component';
 import UserModal from './UseModal';
 import { createUser, deleteUser, getUsers, updateUser } from '../services/useService';
+import StatusBagde from './StatusBagde';
 
 export default function DataTable() {
   const columns = [
@@ -27,7 +28,7 @@ export default function DataTable() {
     },
     {
       name: 'STATUS',
-      selector: row => row.status,
+      selector: row => <StatusBagde status={row.status}/>,
       sortable: true,
     },
     {
