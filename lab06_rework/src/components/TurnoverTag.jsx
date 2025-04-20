@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import cart from '../assets/cart.png'
 
 export default function TurnoverTag(){
 
@@ -22,15 +23,14 @@ export default function TurnoverTag(){
     const turn_over = data[0]
 
     return(
-        <div className="bg-red-200 rounded-xl p-5 grid grid-cols-4">
+        <div className="bg-red-200 rounded-xl p-5 grid grid-cols-4 gap-5">
             <div className="flex flex-col col-span-3">
                 <p>Turnover</p>
                 <p>${turn_over.value}</p>
                 <p>{(turn_over.percented *100).toFixed(2)} % period at change</p>
             </div>
             <div>
-                <button></button>
-                <img src="./assets/cart.png" alt="" />
+                <img className="size-[30px]" src={cart} alt="" />
             </div>
         </div>
     )
