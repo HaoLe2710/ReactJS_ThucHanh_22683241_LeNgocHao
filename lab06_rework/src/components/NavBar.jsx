@@ -18,7 +18,30 @@ export default function NavBar() {
 
   return (
     <div className="flex flex-col gap-5 p-3 m-3">
-      <div><p className='text-center text-3xl font-bold p-3 m-3 bg-green-200 rounded-2xl'>ADMIN MANAGER</p></div>
+      <div className="flex items-center justify-center p-4 m-4 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl shadow-lg">
+        <div className="flex items-center space-x-3">
+          <div className="bg-white p-2 rounded-full shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-green-600"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.5 6h3M4 6h3M17 6h3M6 10.5v3M6 17h3M10.5 17h3M17 17h3M12 12v.01"
+              />
+            </svg>
+          </div>
+          <h1 className="text-white text-3xl font-extrabold tracking-wider drop-shadow">
+            ADMIN MANAGER
+          </h1>
+        </div>
+      </div>
+
       {navItems.map((item, index) => (
         <NavLink
           key={index}

@@ -148,7 +148,7 @@ export default function DataTable() {
   }
 
   return (
-    <div className="p-4">
+    <div className="p-4 shadow-xl rounded-2xl">
         <div className="flex justify-between mb-2">
             <div className='flex gap-2'>
                 <img className='size-[30px]' src={report} alt="" />

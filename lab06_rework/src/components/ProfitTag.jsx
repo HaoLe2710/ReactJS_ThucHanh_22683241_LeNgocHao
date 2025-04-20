@@ -23,11 +23,11 @@ export default function ProfitTag(){
     const profit = data[0]
 
     return(
-        <div className="bg-green-200 rounded-xl p-5 grid grid-cols-4 gap-5">
+        <div className="bg-green-200 rounded-xl p-5 grid grid-cols-4 gap-5 shadow-xl">
             <div className="flex flex-col col-span-3">
-                <p>Profit</p>
+                <p className="font-black text-2xl">Profit</p>
                 <p>${profit.value}</p>
-                <p>{(profit.percented * 100).toFixed(2)}% period at change</p>
+                <p className="font-bold text-green-600">+{(profit.percented * 100).toFixed(2)}% period at change</p>
             </div>
             <div>
                 <button>

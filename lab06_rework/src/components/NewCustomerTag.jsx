@@ -23,11 +23,11 @@ export default function NewCustomerTag(){
     const new_customer = data[0]
 
     return(
-        <div className="bg-blue-200 rounded-xl p-5 grid grid-cols-4 gap-5">
+        <div className="bg-blue-200 rounded-xl p-5 grid grid-cols-4 gap-5 shadow-xl">
             <div className="flex flex-col col-span-3">
-                <p>New customer</p>
+                <p className="font-black text-2xl">New customer</p>
                 <p>{new_customer.value}</p>
-                <p>{(new_customer.percented * 100).toFixed(2)}% period at change</p>
+                <p className="text-green-600 font-bold">+{(new_customer.percented * 100).toFixed(2)}% period at change</p>
             </div>
             <div>
                 <img className="size-[25px]" src={customer} alt="" />

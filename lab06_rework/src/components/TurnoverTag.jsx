@@ -23,14 +23,14 @@ export default function TurnoverTag(){
     const turn_over = data[0]
 
     return(
-        <div className="bg-red-200 rounded-xl p-5 grid grid-cols-4 gap-5">
+        <div className="bg-red-200 rounded-xl p-5 grid grid-cols-4 gap-5 shadow-xl">
             <div className="flex flex-col col-span-3">
-                <p>Turnover</p>
+                <p className="font-black text-2xl">Turnover</p>
                 <p>${turn_over.value}</p>
-                <p>{(turn_over.percented *100).toFixed(2)} % period at change</p>
+                <p className="text-green-600 font-bold">+{(turn_over.percented *100).toFixed(2)}% period at change</p>
             </div>
             <div>
-                <img className="size-[30px]" src={cart} alt="" />
+                <img className="size-[27px]" src={cart} alt="" />
             </div>
         </div>
     )
