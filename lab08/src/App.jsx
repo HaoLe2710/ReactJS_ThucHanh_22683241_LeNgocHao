@@ -6,6 +6,7 @@ import TodoApp from './features/TodoApp/TodoApp';
 import UsersList from './features/Users/UsersList';
 import ClassicCounter from './reduxClassic/ClassicCounter';
 import ToolkitCounter from './reduxToolkit/ToolkitCounter';
+import CounterAppAdvanvce from './features/Counter/CounterApp';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <ShoppingCart/>
         <AuthComponent/>
         <UsersList/>
+        <CounterAppAdvanvce/>
       </div>
     </div>
   );
