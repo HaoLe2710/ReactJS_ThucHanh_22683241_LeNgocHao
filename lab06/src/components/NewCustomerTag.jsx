@@ -26,7 +26,8 @@ export default function NewCustomerTag(){
             <div className="flex flex-col col-span-3">
                 <p>New customer</p>
                 <p>{new_customer.value}</p>
-                <p>{(new_customer.percented * 100).toFixed(2)}% period at change</p>
+                <span><p className="text-green-500">{(new_customer.percented * 100).toFixed(2)}%</p><p> period at change</p></span>
+                
             </div>
             <div>
                 <img src="" alt="" />
