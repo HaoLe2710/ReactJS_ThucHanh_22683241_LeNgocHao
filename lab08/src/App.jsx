@@ -10,6 +10,7 @@ import CounterAppAdvanvce from './features/Counter/CounterApp';
 import CalculatorForm from './features/Calculator/CalculatorForm';
 import EventForm from './features/EventManagement/EventForm';
 import EventList from './features/EventManagement/EventList';
+import StoreCombinedComponent from './components/StoreCombiedComponent';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <CalculatorForm/>
         <EventForm/>
         <EventList/>
+        <StoreCombinedComponent/>
       </div>
     </div>
   );

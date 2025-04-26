@@ -9,6 +9,7 @@ import usersReducer from '../features/Users/usersSlice';
 import counterReducerAdvance from '../features/Counter/counterSlice';
 import calculatorReducer from '../features/Calculator/calculatorSlice';
 import eventReducer from '../features/EventManagement/eventSlice';
+import productReducer from '../features/Product/productSlice';
 
 const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ const store = configureStore({
     counter: counterReducerAdvance,
     calculator: calculatorReducer,
     event: eventReducer,
+    product: productReducer,
   },
 });
 
