@@ -7,6 +7,7 @@ import cartReducer from '../features/ShoppingCart/cartSlice';
 import authReducer from '../features/Auth/authSlice';
 import usersReducer from '../features/Users/usersSlice';
 import counterReducerAdvance from '../features/Counter/counterSlice';
+import calculatorReducer from '../features/Calculator/calculatorSlice';
 
 const store = configureStore({
   reducer: {
@@ -17,6 +18,7 @@ const store = configureStore({
     auth: authReducer,
     users: usersReducer,
     counter: counterReducerAdvance,
+    calculator: calculatorReducer,
   },
 });
 

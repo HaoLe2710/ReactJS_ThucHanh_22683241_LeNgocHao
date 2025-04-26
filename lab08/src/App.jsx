@@ -7,6 +7,7 @@ import UsersList from './features/Users/UsersList';
 import ClassicCounter from './reduxClassic/ClassicCounter';
 import ToolkitCounter from './reduxToolkit/ToolkitCounter';
 import CounterAppAdvanvce from './features/Counter/CounterApp';
+import CalculatorForm from './features/Calculator/CalculatorForm';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <AuthComponent/>
         <UsersList/>
         <CounterAppAdvanvce/>
+        <CalculatorForm/>
       </div>
     </div>
   );
