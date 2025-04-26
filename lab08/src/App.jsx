@@ -1,3 +1,4 @@
+import CounterApp from './features/CounterApp/CounterApp';
 import ClassicCounter from './reduxClassic/ClassicCounter';
 import ToolkitCounter from './reduxToolkit/ToolkitCounter';
 
@@ -8,6 +9,7 @@ function App() {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <ClassicCounter />
         <ToolkitCounter />
+        <CounterApp/>
       </div>
     </div>
   );
