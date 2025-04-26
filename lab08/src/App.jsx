@@ -3,6 +3,7 @@ import CounterApp from './features/CounterApp/CounterApp';
 import ShoppingCart from './features/ShoppingCart/ShoppingCart';
 import ThemeToggle from './features/ThemeToggle/ThemeToggle';
 import TodoApp from './features/TodoApp/TodoApp';
+import UsersList from './features/Users/UsersList';
 import ClassicCounter from './reduxClassic/ClassicCounter';
 import ToolkitCounter from './reduxToolkit/ToolkitCounter';
 
@@ -10,7 +11,7 @@ function App() {
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem' }}>
       <h1>So sánh Redux Thường vs Redux Toolkit</h1>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div style={{ display: 'grid', justifyContent: 'center' }}>
         <ClassicCounter />
         <ToolkitCounter />
         <CounterApp/>
@@ -18,6 +19,7 @@ function App() {
         <ThemeToggle/>
         <ShoppingCart/>
         <AuthComponent/>
+        <UsersList/>
       </div>
     </div>
   );
