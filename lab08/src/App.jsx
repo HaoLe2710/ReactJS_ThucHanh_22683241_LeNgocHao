@@ -1,4 +1,5 @@
 import CounterApp from './features/CounterApp/CounterApp';
+import ShoppingCart from './features/ShoppingCart/ShoppingCart';
 import ThemeToggle from './features/ThemeToggle/ThemeToggle';
 import TodoApp from './features/TodoApp/TodoApp';
 import ClassicCounter from './reduxClassic/ClassicCounter';
@@ -14,6 +15,7 @@ function App() {
         <CounterApp/>
         <TodoApp/>
         <ThemeToggle/>
+        <ShoppingCart/>
       </div>
     </div>
   );
