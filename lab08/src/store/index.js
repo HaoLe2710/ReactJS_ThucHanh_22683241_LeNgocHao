@@ -2,11 +2,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../features/CounterApp/counterSlice';
 import todoReducer from '../features/TodoApp/todoSlice';
+import themeReducer from '../features/ThemeToggle/themeSlice';
 
 const store = configureStore({
   reducer: {
     counter: counterReducer, 
-    todos: todoReducer 
+    todos: todoReducer ,
+    theme: themeReducer 
   },
 });
 

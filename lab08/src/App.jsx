@@ -1,4 +1,5 @@
 import CounterApp from './features/CounterApp/CounterApp';
+import ThemeToggle from './features/ThemeToggle/ThemeToggle';
 import TodoApp from './features/TodoApp/TodoApp';
 import ClassicCounter from './reduxClassic/ClassicCounter';
 import ToolkitCounter from './reduxToolkit/ToolkitCounter';
@@ -12,6 +13,7 @@ function App() {
         <ToolkitCounter />
         <CounterApp/>
         <TodoApp/>
+        <ThemeToggle/>
       </div>
     </div>
   );
