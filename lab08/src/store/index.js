@@ -8,6 +8,7 @@ import authReducer from '../features/Auth/authSlice';
 import usersReducer from '../features/Users/usersSlice';
 import counterReducerAdvance from '../features/Counter/counterSlice';
 import calculatorReducer from '../features/Calculator/calculatorSlice';
+import eventReducer from '../features/EventManagement/eventSlice';
 
 const store = configureStore({
   reducer: {
@@ -19,6 +20,7 @@ const store = configureStore({
     users: usersReducer,
     counter: counterReducerAdvance,
     calculator: calculatorReducer,
+    event: eventReducer,
   },
 });
 

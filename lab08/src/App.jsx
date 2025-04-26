@@ -8,6 +8,8 @@ import ClassicCounter from './reduxClassic/ClassicCounter';
 import ToolkitCounter from './reduxToolkit/ToolkitCounter';
 import CounterAppAdvanvce from './features/Counter/CounterApp';
 import CalculatorForm from './features/Calculator/CalculatorForm';
+import EventForm from './features/EventManagement/EventForm';
+import EventList from './features/EventManagement/EventList';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <UsersList/>
         <CounterAppAdvanvce/>
         <CalculatorForm/>
+        <EventForm/>
+        <EventList/>
       </div>
     </div>
   );
