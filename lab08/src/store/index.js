@@ -4,13 +4,15 @@ import counterReducer from '../features/CounterApp/counterSlice';
 import todoReducer from '../features/TodoApp/todoSlice';
 import themeReducer from '../features/ThemeToggle/themeSlice';
 import cartReducer from '../features/ShoppingCart/cartSlice';
+import authReducer from '../features/Auth/authSlice';
 
 const store = configureStore({
   reducer: {
     counter: counterReducer, 
     todos: todoReducer ,
     theme: themeReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    auth: authReducer
   },
 });
 

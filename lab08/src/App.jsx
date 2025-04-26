@@ -1,3 +1,4 @@
+import AuthComponent from './features/Auth/AuthComponent';
 import CounterApp from './features/CounterApp/CounterApp';
 import ShoppingCart from './features/ShoppingCart/ShoppingCart';
 import ThemeToggle from './features/ThemeToggle/ThemeToggle';
@@ -16,6 +17,7 @@ function App() {
         <TodoApp/>
         <ThemeToggle/>
         <ShoppingCart/>
+        <AuthComponent/>
       </div>
     </div>
   );
